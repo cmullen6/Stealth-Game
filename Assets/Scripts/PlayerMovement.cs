@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isCrouching;
-    bool isGroundedByWall;
-
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -25,6 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        bool isGrounded = controller.isGrounded;
+
+        // Ground stick force
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        // Determine speed
         float speed = isCrouching
             ? crouchSpeed
             : Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
@@ -34,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        // Movement noise
-        if (isGroundedByWall && Mathf.Abs(x) > 0.1f)
+        // Emit movement noise
+        if (isGrounded && Mathf.Abs(x) > 0.1f)
         {
             if (isCrouching)
                 noise.Emit(noise.crouchNoise);
@@ -45,12 +52,8 @@ public class PlayerMovement : MonoBehaviour
                 noise.Emit(noise.walkNoise);
         }
 
-        // Stick to wall/platform
-        if (isGroundedByWall && velocity.y < 0)
-            velocity.y = -5f;
-
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGroundedByWall)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = jumpForce;
             noise.Emit(noise.jumpNoise);
@@ -60,28 +63,12 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        // Crouch
+        // Crouch toggle
         if (Input.GetKeyDown(KeyCode.C))
         {
             isCrouching = !isCrouching;
             controller.height = isCrouching ? 1f : 2f;
         }
     }
-
-    void LateUpdate()
-    {
-        // Reset every frame — will be re-set if we hit a wall/platform
-        isGroundedByWall = false;
-    }
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        // Only count surfaces tagged as Wall AND hit from above-ish
-        if (hit.collider.CompareTag("Wall") && hit.normal.y > 0.3f)
-        {
-            isGroundedByWall = true;
-        }
-    }
-
     public bool IsCrouching() => isCrouching;
 }
