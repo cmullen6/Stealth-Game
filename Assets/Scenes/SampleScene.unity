@@ -494,18 +494,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad28b9e020781c4db31b2886b3b410b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetection
-  visionRange: 8
-  visionAngle: 45
+  tuning: {fileID: 0}
   visionOrigin: {fileID: 924918159}
   visionMask:
     serializedVersion: 2
     m_Bits: 264
-  tuning: {fileID: 0}
-  noiseSensitivity: 1
   alertLevel: 0
   detectionValue: 0
-  detectionFillSpeed: 1
-  detectionDecaySpeed: 0.5
 --- !u!114 &218405822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAlertBroadcaster
   alertRadius: 8
+  detection: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,8 +1524,6 @@ GameObject:
   - component: {fileID: 663968425}
   - component: {fileID: 663968424}
   - component: {fileID: 663968423}
-  - component: {fileID: 663968427}
-  - component: {fileID: 663968426}
   m_Layer: 7
   m_Name: Enemy_Patrol
   m_TagString: Untagged
@@ -1666,18 +1660,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad28b9e020781c4db31b2886b3b410b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDetection
-  visionRange: 8
-  visionAngle: 45
+  tuning: {fileID: 0}
   visionOrigin: {fileID: 1678808833}
   visionMask:
     serializedVersion: 2
     m_Bits: 264
-  tuning: {fileID: 0}
-  noiseSensitivity: 1
   alertLevel: 0
   detectionValue: 0
-  detectionFillSpeed: 1
-  detectionDecaySpeed: 0.5
 --- !u!114 &663968425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,32 +1684,6 @@ MonoBehaviour:
   - {fileID: 606249382}
   baseSpeed: 2
   chaseSpeed: 5
---- !u!114 &663968426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663968418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8f48c8a0690ed48a4f13cbaffec27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAlertBroadcaster
-  alertRadius: 8
---- !u!114 &663968427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663968418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78360547c51b6c24fa7cb739c813f59f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySearch
-  searchDuration: 3
 --- !u!1001 &666981095
 PrefabInstance:
   m_ObjectHideFlags: 0

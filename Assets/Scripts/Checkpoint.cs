@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        Current = this;
+
+        GameManager.Instance.SetCheckpoint(transform);
     }
 }
