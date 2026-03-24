@@ -3799,7 +3799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7662169864051870679, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: value
-      value: 5
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4142,10 +4142,6 @@ PrefabInstance:
     - target: {fileID: 3670390215539596958, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: m_Name
       value: Super Pickup (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662169864051870679, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
-      propertyPath: value
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9723,7 +9719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7662169864051870679, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: value
-      value: 5
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24572,7 +24568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7662169864051870679, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: value
-      value: 5
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
       propertyPath: m_LocalPosition.x
