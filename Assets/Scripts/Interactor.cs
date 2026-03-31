@@ -8,7 +8,7 @@ public class Interactor : MonoBehaviour
     //Code for element that checks for locked doors and turns on / off UI
 
     public Transform interactionPoint;
-    public float interactionRange = 0.25f;
+    public float interactionRange = 1.5f;
     public LayerMask interactionMask;
 
     private readonly Collider[] colliders = new Collider[2];

@@ -47,8 +47,6 @@ public class Lockpick : MonoBehaviour
 
         hitArea.SetActive(true);
 
-        //Lockpicking(counter);
-
     }
 
     public Vector3 GetPos()
@@ -73,9 +71,7 @@ public class Lockpick : MonoBehaviour
             lockUI.SetActive(false);
 
         }
-
-        //Player actions
-        if ((Keyboard.current.eKey.wasPressedThisFrame) && (hitMarker.CompareTag("LockpickArea")))
+        else if ((Keyboard.current.eKey.wasPressedThisFrame) && (hitMarker.CompareTag("LockpickArea")))
         {
 
             counter++;
@@ -97,40 +93,6 @@ public class Lockpick : MonoBehaviour
 
     }
 
-    /*
-    //Lockpicking Minigame Code
-    void Lockpicking(int counter)
-    {
-
-        if (counter == 3)
-        {
-
-            lockUI.SetActive(false);
-
-        }
-
-        //Player actions
-        if ((Keyboard.current.eKey.wasPressedThisFrame) && (hitMarker.CompareTag("LockpickArea")))
-        {
-
-            counter++;
-
-            Debug.Log("hit");
-
-            SpawnPicking();
-
-        }
-
-        if ((Keyboard.current.escapeKey.wasPressedThisFrame))
-        {
-
-            Debug.Log("esc");
-
-            lockUI.SetActive(false);
-
-        }
-    }
-    */
 
     private void OnDrawGizmos()
     {
