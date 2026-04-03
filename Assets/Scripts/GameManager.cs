@@ -10,25 +10,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float maxTime = 120f;
     private float timer;
 
-    [Header("Score")]
-    [SerializeField] private int score;
-
-    [Header("Player Reference")]
-    [SerializeField] private Transform player;
-
-    [Header("Checkpoint")]
-    private Transform currentCheckpoint;
+    [Header("Pickups")]
+    [SerializeField] private int requiredPickups = 3;
+    private int currentPickups = 0;
 
     [Header("Game State")]
     private bool gameOver;
 
-    // ===== PUBLIC READ-ONLY ACCESS =====
+    // ===== PUBLIC READ =====
     public float Timer => timer;
-    public float MaxTime => maxTime;
-    public int Score => score;
+    public int CurrentPickups => currentPickups;
+    public int RequiredPickups => requiredPickups;
+    public bool HasMetRequirement => currentPickups >= requiredPickups;
     public bool IsGameOver => gameOver;
 
-    private void Awake()
+    void Awake()
     {
         if (Instance != null)
         {
@@ -40,12 +36,22 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    void OnEnable()
     {
-        timer = maxTime;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void Update()
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void Start()
+    {
+        ResetLevel();
+    }
+
+    void Update()
     {
         if (gameOver) return;
 
@@ -57,74 +63,40 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // ===== WIN GAME =====
-    public void WinGame()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        gameOver = true;
-        Time.timeScale = 0f;
-
-        // Optional: load a win scene
-        // SceneManager.LoadScene("WinScene");
-
-        Debug.Log("You Win!");
+        ResetLevel();
+        Time.timeScale = 1f;
     }
 
-    // ===== SCORE =====
-    public void AddScore(int amount)
+    void ResetLevel()
     {
-        score += amount;
-    }
-
-    // ===== TIMER =====
-    public void AddTime(float amount)
-    {
-        timer = Mathf.Clamp(timer + amount, 0, maxTime);
-    }
-
-    // ===== CHECKPOINT =====
-    public void SetCheckpoint(Transform checkpoint)
-    {
-        currentCheckpoint = checkpoint;
-    }
-
-    public void RespawnPlayer()
-    {
-        if (player == null || currentCheckpoint == null) return;
-
-        player.position = currentCheckpoint.position;
         timer = maxTime;
+        currentPickups = 0;
         gameOver = false;
     }
 
-    // ===== GAME FLOW =====
+    public void AddPickup(int amount)
+    {
+        currentPickups += amount;
+    }
+
     public void TriggerGameOver()
     {
         gameOver = true;
         Time.timeScale = 0f;
     }
 
-    public void ReloadFromCheckpoint()
+    public void RestartLevel()
     {
         Time.timeScale = 1f;
-        RespawnPlayer();
+        Scene current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.name);
     }
 
-    // ===== UI BUTTON METHODS =====
-    public void StartGame()
+    public void LoadScene(string sceneName)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("GameScene");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    public void ReturnToMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(sceneName);
     }
 }
-

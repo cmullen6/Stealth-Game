@@ -3,15 +3,20 @@ using UnityEngine;
 
 public class UIUpdater : MonoBehaviour
 {
-    [Header("UI References")]
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [Header("UI")]
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI pickupText;
 
-    private void Update()
+    void Update()
     {
         if (GameManager.Instance == null) return;
 
+        // Timer
         timerText.text = Mathf.CeilToInt(GameManager.Instance.Timer).ToString();
-        scoreText.text = "$" + GameManager.Instance.Score;
+
+        // Pickups (x / required)
+        pickupText.text =
+            GameManager.Instance.CurrentPickups + " / " +
+            GameManager.Instance.RequiredPickups;
     }
 }

@@ -1,11 +1,34 @@
 using UnityEngine;
 
-public class ExitZone : MonoBehaviour
+public class ExitDoor : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    public string sceneToLoad;
+    public GameObject readyIndicator;
+
+    void Update()
+    {
+        if (GameManager.Instance == null) return;
+
+        bool ready = GameManager.Instance.HasMetRequirement;
+
+        if (readyIndicator != null)
+            readyIndicator.SetActive(ready);
+    }
+
+    void OnTriggerStay(Collider other)
     {
         if (!other.CompareTag("Player")) return;
 
-        GameManager.Instance.WinGame();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (GameManager.Instance.HasMetRequirement)
+            {
+                GameManager.Instance.LoadScene(sceneToLoad);
+            }
+            else
+            {
+                Debug.Log("Need more pickups!");
+            }
+        }
     }
 }

@@ -4,20 +4,33 @@ public class GameOverUI : MonoBehaviour
 {
     public GameObject panel;
 
+    void Start()
+    {
+        if (panel != null)
+            panel.SetActive(false);
+    }
+
     void Update()
     {
         if (GameManager.Instance == null) return;
 
-        panel.SetActive(GameManager.Instance.IsGameOver);
+        if (panel != null)
+            panel.SetActive(GameManager.Instance.IsGameOver);
     }
 
     public void Restart()
     {
-        GameManager.Instance.ReloadFromCheckpoint();
+        if (panel != null)
+            panel.SetActive(false);
+
+        GameManager.Instance.RestartLevel();
     }
 
     public void MainMenu()
     {
-        GameManager.Instance.ReturnToMainMenu();
+        if (panel != null)
+            panel.SetActive(false);
+
+        GameManager.Instance.LoadScene("MainMenu");
     }
 }

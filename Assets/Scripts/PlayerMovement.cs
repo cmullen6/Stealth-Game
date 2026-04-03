@@ -4,10 +4,13 @@ using UnityEngine;
 [RequireComponent(typeof(NoiseEmitter))]
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     public float walkSpeed = 4f;
-    public float sprintSpeed = 7f;
+    public float sprintSpeed = 6f;
     public float crouchSpeed = 2f;
-    public float jumpForce = 6f;
+
+    [Header("Jump")]
+    public float jumpHeight = 1.2f; // ~1 meter jump
     public float gravity = -20f;
 
     CharacterController controller;
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            velocity.y = jumpForce;
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             noise.Emit(noise.jumpNoise);
         }
 

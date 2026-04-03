@@ -2,30 +2,38 @@ using UnityEngine;
 
 public class LookoutEnemy : MonoBehaviour
 {
-    public float baseTurnSpeed = 90f;
-    float currentTurnSpeed;
+    public float baseFlipTime = 3f;
 
     EnemyDetection detection;
 
-    void Awake()
-    {
-        detection = GetComponent<EnemyDetection>();
-        detection.OnAlertLevelChanged += UpdateAlertness;
-    }
+    float timer;
 
     void Start()
     {
-        UpdateAlertness(0);
+        detection = GetComponent<EnemyDetection>();
+        timer = baseFlipTime;
     }
 
     void Update()
     {
-        transform.Rotate(Vector3.up * currentTurnSpeed * Time.deltaTime);
+        if (detection == null) return;
+
+        //Faster flipping at higher alert
+        float modifier = 1f - (detection.alertLevel * 0.2f);
+        float currentTime = Mathf.Max(0.8f, baseFlipTime * modifier);
+
+        timer -= Time.deltaTime;
+
+        if (timer <= 0f)
+        {
+            Flip();
+            timer = currentTime;
+        }
     }
 
-    void UpdateAlertness(int level)
+    void Flip()
     {
-        currentTurnSpeed = baseTurnSpeed + (level * 60f);
+        transform.Rotate(0, 180f, 0);
     }
 }
 

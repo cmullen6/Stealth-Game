@@ -35,10 +35,14 @@ public class PatrolEnemy : MonoBehaviour
             agent.destination = player.position;
             return;
         }
-
+        //should flip them 180
         if (agent.remainingDistance < 0.2f)
         {
             patrolIndex = (patrolIndex + 1) % patrolPoints.Length;
+
+            Vector3 dir = (patrolPoints[patrolIndex].position - transform.position).normalized;
+            transform.rotation = Quaternion.LookRotation(dir);
+
             agent.destination = patrolPoints[patrolIndex].position;
         }
     }
