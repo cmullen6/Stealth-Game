@@ -6,13 +6,7 @@ using System.Linq;
 public class Lockpick : MonoBehaviour
 {
 
-
-    //BUGS*******
-    //counter doesnt seem to work, either a:
-        //collision issue
-        //tag issue
-        //rigid body issue
-        //some dumb thing I didn't notice
+    // ADD FREEZE CHARACTER
 
 
     int counter = 0;
@@ -31,7 +25,8 @@ public class Lockpick : MonoBehaviour
 
 
     //Spawns hit marker & moves hit indicator ** I know some of this is ugly :( **
-    public void SpawnPicking()
+
+    public void Start()
     {
 
         spawns.Add(spawn1);
@@ -39,6 +34,11 @@ public class Lockpick : MonoBehaviour
         spawns.Add(spawn3);
         spawns.Add(spawn4);
         spawns.Add(spawn5);
+
+    }
+
+    public void SpawnPicking()
+    {
 
         lockUI.SetActive(true);
         hitArea.SetActive(false);
@@ -70,16 +70,24 @@ public class Lockpick : MonoBehaviour
 
             lockUI.SetActive(false);
 
+            counter = 0;
+
         }
-        else if ((Keyboard.current.eKey.wasPressedThisFrame) && (hitMarker.CompareTag("LockpickArea")))
+        else if (Keyboard.current.eKey.wasPressedThisFrame)
         {
 
-            counter++;
+            float distance = Vector3.Distance(hitMarker.transform.position, hitArea.transform.position);
 
-            Debug.Log("hit");
+            if (distance < 0.5f)
+            {
+                counter++;
 
-            SpawnPicking();
+                Debug.Log("Hit");
 
+                SpawnPicking();
+
+            }
+       
         }
 
         if ((Keyboard.current.escapeKey.wasPressedThisFrame))

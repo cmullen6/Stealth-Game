@@ -5,7 +5,7 @@ public class UIUpdater : MonoBehaviour
 {
     [Header("UI")]
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI pickupText;
+    //public TextMeshProUGUI pickupText;
 
     void Update()
     {
@@ -15,8 +15,8 @@ public class UIUpdater : MonoBehaviour
         timerText.text = Mathf.CeilToInt(GameManager.Instance.Timer).ToString();
 
         // Pickups (x / required)
-        pickupText.text =
-            GameManager.Instance.CurrentPickups + " / " +
-            GameManager.Instance.RequiredPickups;
+        //pickupText.text =
+           // GameManager.Instance.CurrentPickups + " / " +
+           // GameManager.Instance.RequiredPickups;
     }
 }

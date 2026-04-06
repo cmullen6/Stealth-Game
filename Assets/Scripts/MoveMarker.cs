@@ -10,6 +10,7 @@ public class MoveMarker : MonoBehaviour
 
     //BUGS**********
     // if you hit esc in lockpick then start again it will exponentially slow the marker down
+    // Marker does not stay where it is meant to stay
 
 
 
