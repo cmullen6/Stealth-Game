@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 76e5b50a591dd4a4382077cbe8780965, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a5df4ce7d6479441a71d4b88349ad6c, type: 2}
     - target: {fileID: 919132149155446097, guid: 76e5b50a591dd4a4382077cbe8780965, type: 3}
       propertyPath: m_Name
       value: SmoothAllWall
