@@ -94,7 +94,7 @@ public class Lockpick : MonoBehaviour
 
             float distance = Vector3.Distance(hitMarker.transform.position, hitArea.transform.position);
 
-            if (distance < 0.5f)
+            if (distance < 0.7f)
             {
                 counter++;
 

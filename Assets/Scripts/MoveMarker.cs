@@ -14,7 +14,7 @@ public class MoveMarker : MonoBehaviour
 
 
 
-    private float moveTime = 2.5f;
+    private float moveTime = 1f;
     public GameObject hitMarker;
     private Vector3 boundSize = new Vector3(1, 1, 1);
     public Transform upperX;
