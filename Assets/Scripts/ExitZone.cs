@@ -4,6 +4,7 @@ public class ExitDoor : MonoBehaviour
 {
     public string sceneToLoad;
     public GameObject readyIndicator;
+    public EndLevelUI endLevelUI;
 
     void Update()
     {
@@ -23,7 +24,14 @@ public class ExitDoor : MonoBehaviour
         {
             if (GameManager.Instance.HasMetRequirement)
             {
-                GameManager.Instance.LoadScene(sceneToLoad);
+                if (endLevelUI != null)
+                {
+                    endLevelUI.Show(sceneToLoad);
+                }
+                else
+                {
+                    GameManager.Instance.LoadScene(sceneToLoad);
+                }
             }
             else
             {

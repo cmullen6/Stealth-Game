@@ -1,72 +1,57 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class EnemyUI : MonoBehaviour
 {
     public EnemyDetection enemy;
 
-    [Header("Feet UI")]
     public Slider detectionBar;
-
-    [Header("Head UI")]
     public GameObject alertIcon;
-    public TextMeshProUGUI alertText;
+    public TMPro.TextMeshProUGUI alertText;
+
+    public Vector3 barOffset = new Vector3(0, 0.1f, 0);   // feet
+    public Vector3 iconOffset = new Vector3(0, 2.2f, 0);  // head
 
     Camera cam;
-
+    private void Update()
+    {
+        Debug.Log(enemy.detectionValue);
+    }
     void Start()
     {
         cam = Camera.main;
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (!enemy || cam == null) return;
+        if (enemy == null || cam == null) return;
 
-        FaceCamera();
-
-        UpdateDetectionBar();
-        UpdateAlertUI();
-    }
-
-    void FaceCamera()
-    {
+        // ===== FACE CAMERA (NO SPIN)
         Vector3 dir = transform.position - cam.transform.position;
-        dir.y = 0; // prevents tilt
+        dir.y = 0;
         transform.rotation = Quaternion.LookRotation(dir);
-    }
 
-    void UpdateDetectionBar()
-    {
-        if (detectionBar == null) return;
-
-        detectionBar.value = enemy.detectionValue;
-
-        Image fillImage = detectionBar.fillRect.GetComponent<Image>();
-
-        if (fillImage != null)
+        // ===== BAR POSITION (FEET)
+        if (detectionBar != null)
         {
-            fillImage.color = Color.Lerp(Color.green, Color.red, enemy.detectionValue);
+            detectionBar.transform.position = enemy.transform.position + barOffset;
+
+            detectionBar.value = enemy.detectionValue;
         }
-    }
 
-    void UpdateAlertUI()
-    {
-        if (enemy.alertLevel > 0)
+        // ===== ALERT ICON (HEAD)
+        if (alertIcon != null)
         {
-            if (alertIcon != null) alertIcon.SetActive(true);
+            alertIcon.transform.position = enemy.transform.position + iconOffset;
 
-            if (alertText != null)
+            bool show = enemy.alertLevel > 0;
+            alertIcon.SetActive(show);
+
+            if (show && alertText != null)
             {
-                alertText.gameObject.SetActive(true);
                 alertText.text = enemy.alertLevel.ToString();
             }
         }
-        else
-        {
-            if (alertIcon != null) alertIcon.SetActive(false);
-            if (alertText != null) alertText.gameObject.SetActive(false);
-        }
     }
+
 }

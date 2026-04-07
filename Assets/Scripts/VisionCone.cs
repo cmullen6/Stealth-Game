@@ -7,17 +7,23 @@ public class VisionCone : MonoBehaviour
 
     void Update()
     {
-        if (!detection || !cone || detection.tuning == null) return;
+        if (detection == null || cone == null || detection.tuning == null) return;
 
         float range = detection.tuning.visionRange;
+        float angle = detection.tuning.visionAngle;
+
+        // Scale cone to match detection
+        float radius = Mathf.Tan(angle * Mathf.Deg2Rad) * range;
+
+        cone.localScale = new Vector3(radius, range * 0.5f, radius);
+
+        // Position forward
+        cone.localPosition = new Vector3(0, 0, range * 0.5f);
 
         // Always visible
         cone.gameObject.SetActive(true);
 
-        // Scale cone
-        cone.localScale = new Vector3(range, 1f, range);
-
-        // Optional: color by alert level
+        // Color by alert level
         Renderer r = cone.GetComponent<Renderer>();
         if (r != null)
         {
@@ -27,7 +33,7 @@ public class VisionCone : MonoBehaviour
                 detection.alertLevel == 2 ? new Color(1f, 0.5f, 0f) :
                 Color.red;
 
-            c.a = 0.2f; // transparency
+            c.a = 0.2f;
             r.material.color = c;
         }
     }

@@ -7,6 +7,8 @@ TagManager:
   - Wall
   - LockpickArea
   - HitMarker
+  - LockedDoor
+  - VisionIgnore
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - VisionBlocker
   - Interactable
   - Locked
-  - 
+  - VisionIgnore
   - 
   - 
   - 
