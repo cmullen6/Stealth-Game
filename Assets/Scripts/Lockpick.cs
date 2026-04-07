@@ -20,8 +20,11 @@ public class Lockpick : MonoBehaviour
     public Transform spawn3;
     public Transform spawn4;
     public Transform spawn5;
+    public Transform doorKiller;
     private float spawnSize = 0.25f;
+    private float doorDelete = 2.5f;
     private List<Transform> spawns = new List<Transform>();
+
 
 
     //Spawns hit marker & moves hit indicator ** I know some of this is ugly :( **
@@ -68,6 +71,19 @@ public class Lockpick : MonoBehaviour
         if (counter == 3)
         {
 
+            Collider[] hitColliders = Physics.OverlapSphere(doorKiller.position, doorDelete);
+
+            foreach (var hitCollider in hitColliders)
+            {
+
+                if (hitCollider.CompareTag("LockedDoor"))
+                {
+
+                    Destroy(hitCollider.gameObject);
+
+                }
+            }
+
             lockUI.SetActive(false);
 
             counter = 0;
@@ -111,6 +127,8 @@ public class Lockpick : MonoBehaviour
         Gizmos.DrawWireSphere(spawn3.position, spawnSize);
         Gizmos.DrawWireSphere(spawn4.position, spawnSize);
         Gizmos.DrawWireSphere(spawn5.position, spawnSize);
+
+        Gizmos.DrawWireSphere(doorKiller.position, doorDelete);
 
     }
 }
