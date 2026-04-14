@@ -27,7 +27,7 @@ public class Lockpick : MonoBehaviour
 
 
 
-    //Spawns hit marker & moves hit indicator ** I know some of this is ugly :( **
+    //Spawns hit marker & moves hit indicator
 
     public void Start()
     {
@@ -94,7 +94,7 @@ public class Lockpick : MonoBehaviour
 
             float distance = Vector3.Distance(hitMarker.transform.position, hitArea.transform.position);
 
-            if (distance < 0.7f)
+            if (distance < 0.9f)
             {
                 counter++;
 
