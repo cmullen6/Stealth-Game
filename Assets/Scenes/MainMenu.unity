@@ -818,8 +818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.29309845, y: -0.33850098}
-  m_SizeDelta: {x: 700.8675, y: 271.4018}
+  m_AnchoredPosition: {x: 0.3843, y: -0.81269836}
+  m_SizeDelta: {x: 710.7471, y: 301.7047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529581179
 MonoBehaviour:
@@ -1026,8 +1026,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5050155, y: 0.49916375}
-  m_SizeDelta: {x: 801.01, y: 369.81}
+  m_AnchoredPosition: {x: -1.0285, y: -1.4167}
+  m_SizeDelta: {x: 809.7502, y: 403.0691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618505114
 MonoBehaviour:
@@ -1550,7 +1550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1018671257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2098,8 +2098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.004981, y: 0.0019627}
-  m_SizeDelta: {x: 800.01, y: 368.81}
+  m_AnchoredPosition: {x: -0.004981, y: 0.00092077}
+  m_SizeDelta: {x: 800.01, y: 394.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174490729
 MonoBehaviour:
@@ -3595,8 +3595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0050125, y: -0.00083923}
-  m_SizeDelta: {x: 801.01, y: 369.81}
+  m_AnchoredPosition: {x: -0.0050125, y: 0.00027561}
+  m_SizeDelta: {x: 801.01, y: 395.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588958448
 MonoBehaviour:
@@ -3666,8 +3666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf1a567cfa3bf41b30125706341f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  maxTime: 300
-  requiredPickups: 22
+  maxTime: 240
+  requiredPickups: 8
 --- !u!4 &1717560189
 Transform:
   m_ObjectHideFlags: 0

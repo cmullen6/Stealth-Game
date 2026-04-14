@@ -7,13 +7,6 @@ using UnityEngine.Timeline;
 public class MoveMarker : MonoBehaviour
 {
 
-
-    //BUGS**********
-    // if you hit esc in lockpick then start again it will exponentially slow the marker down
-    // Marker does not stay where it is meant to stay
-
-
-
     private float moveTime = 1f;
     public GameObject hitMarker;
     private Vector3 boundSize = new Vector3(1, 1, 1);
