@@ -9,6 +9,7 @@ TagManager:
   - HitMarker
   - LockedDoor
   - VisionIgnore
+  - Collectible
   layers:
   - Default
   - TransparentFX
