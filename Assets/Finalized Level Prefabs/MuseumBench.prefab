@@ -65,7 +65,8 @@ PrefabInstance:
       value: MuseumBench
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -840777845830954692, guid: 5a017c8252f064846877096271bc1d9f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a017c8252f064846877096271bc1d9f, type: 3}
