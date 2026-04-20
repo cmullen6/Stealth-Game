@@ -10,6 +10,10 @@ TagManager:
   - LockedDoor
   - VisionIgnore
   - Collectible
+  - BreakerZoneOne
+  - BreakerZoneTwo
+  - BreakerZoneThree
+  - BreakerZoneFour
   layers:
   - Default
   - TransparentFX
@@ -24,7 +28,7 @@ TagManager:
   - Interactable
   - Locked
   - VisionIgnore
-  - 
+  - Breaker
   - 
   - 
   - 
