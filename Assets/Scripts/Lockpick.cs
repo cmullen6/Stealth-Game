@@ -16,7 +16,6 @@ public class Lockpick : MonoBehaviour
     public GameObject shadowZoneOne;
     public GameObject shadowZoneTwo;
     public GameObject shadowZoneThree;
-    public GameObject shadowZoneFour;
     public Transform spawn1;
     public Transform spawn2;
     public Transform spawn3;
@@ -45,7 +44,6 @@ public class Lockpick : MonoBehaviour
         shadowZoneOne.gameObject.SetActive(false);
         shadowZoneTwo.gameObject.SetActive(false);
         shadowZoneThree.gameObject.SetActive(false);
-        shadowZoneFour.gameObject.SetActive(false);
 
     }
 
@@ -115,13 +113,7 @@ public class Lockpick : MonoBehaviour
                     shadowZoneThree.gameObject.SetActive(true);
 
                 }
-                else if (hitCollider.CompareTag("BreakerZoneFour"))
-                {
-
-
-                    shadowZoneFour.gameObject.SetActive(true);
-
-                }
+ 
             }
 
             lockUI.SetActive(false);

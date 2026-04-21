@@ -36875,37 +36875,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 210, y: 200, z: 210}
   m_Center: {x: -100, y: 100, z: 100}
---- !u!1 &1051410543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1051410544}
-  m_Layer: 8
-  m_Name: ShadowZoneFourHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1051410544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051410543}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 102.81, y: 24.68, z: 0.049999714}
-  m_LocalScale: {x: 7, y: 7, z: 3}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1056280291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72196,7 +72165,6 @@ MonoBehaviour:
   shadowZoneOne: {fileID: 1447412808}
   shadowZoneTwo: {fileID: 1112556313}
   shadowZoneThree: {fileID: 1457510465}
-  shadowZoneFour: {fileID: 1051410543}
   spawn1: {fileID: 477592098}
   spawn2: {fileID: 477592097}
   spawn3: {fileID: 477592096}
@@ -74755,7 +74723,6 @@ SceneRoots:
   - {fileID: 1940735658}
   - {fileID: 1112556314}
   - {fileID: 1457510466}
-  - {fileID: 1051410544}
   - {fileID: 1447412809}
   - {fileID: 777478994}
   - {fileID: 1454509908}
