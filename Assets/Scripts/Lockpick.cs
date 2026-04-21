@@ -8,6 +8,7 @@ public class Lockpick : MonoBehaviour
 
     int counter = 0;
     int miss = 0;
+    int filler = 6;
     private Vector3 boundSize = new Vector3(0.25f, 0.25f, 0.25f);
     public GameObject hitMarker;
     public GameObject hitArea;
@@ -127,7 +128,10 @@ public class Lockpick : MonoBehaviour
         else if (miss == 3)
         {
 
-            noiseEmitter.Emit(miss);
+            noiseEmitter.Emit(filler);
+            noiseEmitter.Emit(filler);
+            noiseEmitter.Emit(filler);
+            noiseEmitter.Emit(filler);
 
             lockUI.SetActive(false);
 
