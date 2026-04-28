@@ -212,7 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &393942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -2606,7 +2607,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &117043452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -3182,7 +3184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &138178158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -11217,7 +11220,7 @@ PrefabInstance:
       objectReference: {fileID: 2008434313}
     - target: {fileID: 5010472407451041843, guid: b7e57eef7e8f09140a437078669b3911, type: 3}
       propertyPath: sceneToLoad
-      value: Level2
+      value: Level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14887,7 +14890,7 @@ PrefabInstance:
       objectReference: {fileID: 2008434313}
     - target: {fileID: 5010472407451041843, guid: b7e57eef7e8f09140a437078669b3911, type: 3}
       propertyPath: sceneToLoad
-      value: Level2
+      value: Level3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18220,7 +18223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &644773508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -18859,7 +18863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &663876082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -21812,7 +21817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!1001 &757930616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31853,7 +31859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1084419319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -37292,7 +37299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1267162861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -46076,7 +46084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1557251945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -54704,7 +54713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1834849298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -56732,7 +56742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1887661224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -56915,7 +56926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1896313370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
@@ -58990,7 +59002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baad8285e95fd4f408fae45630ce1ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
-  rotationSpeed: 100
+  bobHeight: 0.25
+  bobSpeed: 2
 --- !u!4 &1955400797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8663161732390122223, guid: 23f8558c8bcc32246a4f98ad053d2458, type: 3}
