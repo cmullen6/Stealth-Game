@@ -38180,7 +38180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf1a567cfa3bf41b30125706341f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  maxTime: 360
+  maxTime: 300
   requiredPickups: 8
 --- !u!4 &1074705716
 Transform:
