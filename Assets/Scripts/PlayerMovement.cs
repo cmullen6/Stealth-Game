@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         noise = GetComponent<NoiseEmitter>();
     }
 
+
     void Update()
     {
 

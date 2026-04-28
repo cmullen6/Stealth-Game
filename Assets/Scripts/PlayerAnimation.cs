@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerAnimation : MonoBehaviour
 {
 
+    // Some animations are in specific scripts such as lockpicking
+
     private Animator animator;
 
     
@@ -28,13 +30,27 @@ public class PlayerAnimation : MonoBehaviour
 
             }
 
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            if (Keyboard.current.leftShiftKey.wasPressedThisFrame && (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame))
             {
 
-                // lockpick
+                animator.SetBool("Run", true);
+
 
             }
+            else if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
+            {
 
+                animator.SetBool("Walk", true);
+
+
+            }
+            else
+            {
+
+                animator.SetBool("Walk", false);
+                animator.SetBool("Run", false);
+
+            }
 
         }
 

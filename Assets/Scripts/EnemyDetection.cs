@@ -13,6 +13,8 @@ public class EnemyDetection : MonoBehaviour
 
     Transform player;
 
+    private Animator animator;
+
     public System.Action<int> OnAlertLevelChanged;
 
     void Start()
@@ -20,6 +22,8 @@ public class EnemyDetection : MonoBehaviour
         GameObject p = GameObject.FindWithTag("Player");
         if (p != null)
             player = p.transform;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,7 +45,13 @@ public class EnemyDetection : MonoBehaviour
             OnAlertLevelChanged?.Invoke(alertLevel);
 
             if (alertLevel == 3)
+            {
+
+                animator.SetTrigger("Grab");
+
                 GameManager.Instance.TriggerGameOver();
+
+            }
         }
     }
 

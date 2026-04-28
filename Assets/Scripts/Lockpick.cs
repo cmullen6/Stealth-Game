@@ -28,6 +28,7 @@ public class Lockpick : MonoBehaviour
     private List<Transform> spawns = new List<Transform>();
     public NoiseEmitter noiseEmitter;
     public PlayerMovement playerMovement;
+    private Animator animator;
 
 
 
@@ -45,6 +46,8 @@ public class Lockpick : MonoBehaviour
         shadowZoneOne.gameObject.SetActive(false);
         shadowZoneTwo.gameObject.SetActive(false);
         shadowZoneThree.gameObject.SetActive(false);
+
+        animator = GetComponent<Animator>();
 
     }
 
@@ -117,6 +120,8 @@ public class Lockpick : MonoBehaviour
  
             }
 
+            animator.SetBool("Lockpick", false);
+
             lockUI.SetActive(false);
 
             playerMovement.canMove = true;
@@ -133,6 +138,8 @@ public class Lockpick : MonoBehaviour
             noiseEmitter.Emit(filler);
             noiseEmitter.Emit(filler);
 
+            animator.SetBool("Lockpick", false);
+
             lockUI.SetActive(false);
 
             playerMovement.canMove = true;
@@ -145,6 +152,8 @@ public class Lockpick : MonoBehaviour
         {
 
             float distance = Vector3.Distance(hitMarker.transform.position, hitArea.transform.position);
+
+            animator.SetBool("Lockpick", true);
 
             if (distance < 0.9f)
             {
@@ -172,6 +181,8 @@ public class Lockpick : MonoBehaviour
         {
 
             Debug.Log("esc");
+
+            animator.SetBool("Lockpick", false);
 
             lockUI.SetActive(false);
 
