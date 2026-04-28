@@ -73056,6 +73056,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4398385498611886458, guid: b089fb20d3a5da14789da8cb36e69a71, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2073930175}
+    - targetCorrespondingSourceObject: {fileID: 4398385498611886458, guid: b089fb20d3a5da14789da8cb36e69a71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2073930181}
+    - targetCorrespondingSourceObject: {fileID: 4398385498611886458, guid: b089fb20d3a5da14789da8cb36e69a71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2073930180}
   m_SourcePrefab: {fileID: 100100000, guid: b089fb20d3a5da14789da8cb36e69a71, type: 3}
 --- !u!1 &2073930173 stripped
 GameObject:
@@ -73135,6 +73141,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35ade3ea9d9c594d87a70e00e0fc279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoiseEmitter
+--- !u!114 &2073930180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073930173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295feb8ae62cb9840ab1eaefc33868cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+--- !u!95 &2073930181
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073930173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08c5cf18fc6878846b6977c20feb89f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2074145479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8020100253152868550, guid: 5099fbe57281b9d4f8cca90d7a43035d, type: 3}
