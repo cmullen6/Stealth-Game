@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 80977c7ddb8491548a3f3d0fad928445, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4725cffec89fcd241ae650b6a525c1ec, type: 2}
     - target: {fileID: 919132149155446097, guid: 80977c7ddb8491548a3f3d0fad928445, type: 3}
       propertyPath: m_Name
       value: AngelStatueModel
