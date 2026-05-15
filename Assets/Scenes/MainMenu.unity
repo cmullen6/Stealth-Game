@@ -5579,7 +5579,7 @@ MonoBehaviour:
   audioMixer: {fileID: 0}
   normalSnapshot: {fileID: 0}
   lossSnapshot: {fileID: 0}
-  maxTime: 240
+  maxTime: 360
   requiredPickups: 8
 --- !u!4 &1717560189
 Transform:

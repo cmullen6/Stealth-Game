@@ -76184,12 +76184,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1448759135136566094, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
+      propertyPath: m_Height
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448759135136566094, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448759135136566094, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1448759135136566094, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: m_Center.y
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1671788205755205510, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: m_Layer
