@@ -15014,6 +15014,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   pickupClip: {fileID: 8300000, guid: 6f3252486ffd4bd48a86e88763c94eb5, type: 3}
+  lossMusic: {fileID: 8300000, guid: 5fd5e3eed731cdf4fb0fc3ea18eacb35, type: 3}
+  audioMixer: {fileID: 24100000, guid: 53bdf1e9d35790a428cb486a15554346, type: 2}
+  normalSnapshot: {fileID: 24500006, guid: 53bdf1e9d35790a428cb486a15554346, type: 2}
+  lossSnapshot: {fileID: -9187092460678143506, guid: 53bdf1e9d35790a428cb486a15554346, type: 2}
   maxTime: 540
   requiredPickups: 13
 --- !u!4 &526668145

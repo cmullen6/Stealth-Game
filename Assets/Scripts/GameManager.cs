@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 //ADD THIS ONCE TO EACH SCENE!!!
 
@@ -7,6 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public AudioClip pickupClip;
+    public AudioClip lossMusic;
+
+    public AudioMixer audioMixer;
+    public AudioMixerSnapshot normalSnapshot;
+    public AudioMixerSnapshot lossSnapshot;
 
     [Header("Timer")]
     [SerializeField] private float maxTime = 120f;
@@ -76,6 +82,8 @@ public class GameManager : MonoBehaviour
         timer = maxTime;
         currentPickups = 0;
         gameOver = false;
+        normalSnapshot.TransitionTo(0.1f);
+
     }
 
     public void AddPickup(int amount)
@@ -90,6 +98,9 @@ public class GameManager : MonoBehaviour
 
     public void TriggerGameOver()
     {
+
+        SoundFXManager.instance.PlaySoundFXClip(lossMusic, transform, 1f);
+        lossSnapshot.TransitionTo(0.1f);
         gameOver = true;
         Time.timeScale = 0f;
     }

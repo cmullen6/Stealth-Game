@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-9187092460678143506
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Loss Music
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 1c141f45ca76e9c4f99ede5378beeaa3
+  m_FloatValues:
+    297232011a4fc4b4f83c1acea613a3ab: -80
+  m_TransitionOverrides: {}
 --- !u!243 &-5599584792563829560
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -44,6 +56,7 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: -9187092460678143506}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -56,7 +69,7 @@ AudioMixerController:
     - 303280c12a1aefb41b0920f8cebd8520
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -9187092460678143506}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -98,10 +111,12 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snapshot
+  m_Name: Normal Music
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: fd146985be937c347baefa8af70ae88e
-  m_FloatValues: {}
+  m_FloatValues:
+    5cbe40e25cb02a54693df6db33310359: -80
+    179f71883c7c26143a50a070298d1186: -80
   m_TransitionOverrides: {}
 --- !u!243 &4429773609816353077
 AudioMixerGroupController:
