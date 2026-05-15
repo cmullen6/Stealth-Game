@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
@@ -171,6 +172,14 @@ public class MainMenuUI : MonoBehaviour
             mainPanel.SetActive(true);
 
         }
+
+    }
+
+    // Start Level
+    public void LoadLevel()
+    {
+
+        SceneManager.LoadScene("Level1");
 
     }
 

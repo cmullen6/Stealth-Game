@@ -4484,7 +4484,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1717560190}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
         m_MethodName: LoadLevel
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5575,6 +5575,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   pickupClip: {fileID: 0}
+  lossMusic: {fileID: 0}
+  audioMixer: {fileID: 0}
+  normalSnapshot: {fileID: 0}
+  lossSnapshot: {fileID: 0}
   maxTime: 240
   requiredPickups: 8
 --- !u!4 &1717560189
