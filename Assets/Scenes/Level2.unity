@@ -671,7 +671,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -21124,6 +21124,10 @@ PrefabInstance:
       propertyPath: lockpick
       value: 
       objectReference: {fileID: 1515237106}
+    - target: {fileID: 5473061721055886620, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 7796002082724039520, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -21131,6 +21135,14 @@ PrefabInstance:
     - target: {fileID: 8349737153139395220, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349737153139395220, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433371192743310509, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8695299825701294126, guid: 06f1cc7a1dea5f343bc488d15391c1d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -38868,6 +38880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1293129160}
+  - component: {fileID: 1293129161}
   m_Layer: 0
   m_Name: SoundFXManager
   m_TagString: Untagged
@@ -38890,6 +38903,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293129161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293129159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c868906dcb8fe7c4b8118902893abbfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundFXManager
+  soundFXObject: {fileID: 5729139730810103758, guid: d358d68a510cc64419606fadcc6d2eba, type: 3}
 --- !u!4 &1295016560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 335234392046830296, guid: 369cda39927973b418d086cd491043e6, type: 3}

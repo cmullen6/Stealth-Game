@@ -1513,8 +1513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.3843, y: -0.81269836}
-  m_SizeDelta: {x: 710.7471, y: 301.7047}
+  m_AnchoredPosition: {x: 0.38430023, y: 1.6453018}
+  m_SizeDelta: {x: 710.7471, y: 359.3941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529581179
 MonoBehaviour:
@@ -1962,8 +1962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0285, y: -1.4167}
-  m_SizeDelta: {x: 809.7502, y: 403.0691}
+  m_AnchoredPosition: {x: -1.0285, y: 3.9963}
+  m_SizeDelta: {x: 809.7502, y: 460.2283}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618505114
 MonoBehaviour:
@@ -3536,8 +3536,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.004981, y: 0.00092077}
-  m_SizeDelta: {x: 800.01, y: 394.15}
+  m_AnchoredPosition: {x: -0.004981, y: 1.5737}
+  m_SizeDelta: {x: 800.01, y: 456.7676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174490729
 MonoBehaviour:
@@ -4044,14 +4044,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Music  /  SFX:
 
-    Theo (last name needed)
+    Teodor Costache
 
     Danny Castro
 
-    Dan
-    Sienko
+    Dan Sienko
 
-    TreeTree (Need Name)'
+    Xi
+    Dai
+
+    Tony Sun'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e624688f8b6b9e4bbdd0f44fed1fd15, type: 2}
   m_sharedMaterial: {fileID: 1180026824867258725, guid: 5e624688f8b6b9e4bbdd0f44fed1fd15, type: 2}
@@ -4116,7 +4118,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -153.95908, w: -104.203415}
+  m_margin: {x: 0, y: 0, z: -153.95908, w: -125.72575}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5186,8 +5188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0050125, y: 0.00027561}
-  m_SizeDelta: {x: 801.01, y: 395.15}
+  m_AnchoredPosition: {x: -0.0050125, y: -1.8727}
+  m_SizeDelta: {x: 801.01, y: 464.5201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588958448
 MonoBehaviour:
@@ -5572,6 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf1a567cfa3bf41b30125706341f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  pickupClip: {fileID: 0}
   maxTime: 240
   requiredPickups: 8
 --- !u!4 &1717560189
