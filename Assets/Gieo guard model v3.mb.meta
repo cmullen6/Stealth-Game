@@ -1,0 +1,301 @@
+fileFormatVersion: 2
+guid: a60673c42bde6434a98dbbb2214c361f
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: pCylinder15
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: transform6
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Gieo guard model v3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: imagePlane1
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0.0000039759425, y: 0.016624855, z: -0.023658004}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 10, y: 10, z: 10}
+    - name: imagePlane2
+      parentName: Gieo guard model v3(Clone)
+      position: {x: 0.024330305, y: 0.01682819, z: -0.0017130947}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 10, y: 10, z: 10}
+    - name: pCube2
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.029459652, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -0.171805, y: 0.171805, z: 0.171805}
+    - name: pCube4
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.025146997, z: -0.00035594648}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -0.171805, y: 0.171805, z: 0.171805}
+    - name: pCylinder8
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0.0035142154, y: 0.0226901, z: -0.0009198265}
+      rotation: {x: 0, y: -0, z: -0.3864179, w: 0.9223238}
+      scale: {x: 1, y: 2.8333333, z: 1}
+    - name: pCylinder9
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0.00692003, y: 0.020520099, z: -0.0010102561}
+      rotation: {x: 0, y: -0, z: -0.3864179, w: 0.9223238}
+      scale: {x: 1, y: 2.8333333, z: 1}
+    - name: pCylinder10
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface9
+      parentName: pCylinder10
+      position: {x: -0, y: 0, z: 0.00032675717}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCylinder11
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: polySurface8
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: polySurface2_e_32_1
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCylinder12
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.027448969, z: -0.00013283451}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1.0277778, y: 1, z: 0.9236111}
+    - name: pCylinder14
+      parentName: Gieo guard model v3(Clone)
+      position: {x: 0.0042971647, y: 0.0155204125, z: -0.00035121923}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCube9
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCube11
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCylinder15
+      parentName: Gieo guard model v3(Clone)
+      position: {x: 2.8865796e-19, y: 0.03133733, z: -0.00007525853}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform6
+      parentName: pCylinder15
+      position: {x: -2.8865796e-19, y: -0.03133733, z: 0.00007525853}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCube15
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.029101841, z: 0.0015543305}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.16134596, y: 0.09086524, z: 0.005859964}
+    - name: transform4
+      parentName: pCube15
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bodyx
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.015668623, z: -0.00047518968}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform11
+      parentName: bodyx
+      position: {x: -0, y: -0.015668623, z: 0.00047518968}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hatx
+      parentName: Gieo guard model v3(Clone)
+      position: {x: 1.7763568e-19, y: 0.033123787, z: -0.0008438581}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: polySurface10
+      parentName: hatx
+      position: {x: -1.7763568e-19, y: -0.03067629, z: -0.00066163926}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: transform18
+      parentName: polySurface10
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body1
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.015668623, z: -0.00047518968}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: pCylinder17
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.030962188, z: 0.008855921}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 0.051401567, y: 0.051401567, z: 0.0717777}
+    - name: transform9
+      parentName: pCylinder17
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder23
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0.0011168219, y: 0.03083811, z: 0.00027127593}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: transform14
+      parentName: pCylinder23
+      position: {x: -0.0015154157, y: -0.03074314, z: -0.0007287369}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pCylinder24
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.0309898, z: 0.00010253001}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: -1, y: 1, z: 1}
+    - name: transform16
+      parentName: pCylinder24
+      position: {x: 1.110223e-20, y: -0.0309898, z: -0.00010253001}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.016760152, z: -0.00019684467}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mask
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.03022492, z: 0.00050303363}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hat
+      parentName: Gieo guard model v3(Clone)
+      position: {x: -0, y: 0.03310946, z: -0.0016549828}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.02
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -29,6 +29,8 @@ public class Lockpick : MonoBehaviour
     public NoiseEmitter noiseEmitter;
     public PlayerMovement playerMovement;
     private Animator animator;
+    public AudioClip lockpickWin;
+    public AudioClip lockpickHit;
 
 
 
@@ -83,6 +85,9 @@ public class Lockpick : MonoBehaviour
 
         if (counter == 3)
         {
+
+            SoundFXManager.instance.PlaySoundFXClip(lockpickWin, transform, 1f);
+
 
             Collider[] hitColliders = Physics.OverlapSphere(interactReader.position, doorDelete);
 
@@ -157,6 +162,9 @@ public class Lockpick : MonoBehaviour
 
             if (distance < 0.9f)
             {
+
+                SoundFXManager.instance.PlaySoundFXClip(lockpickHit, transform, 1f);
+
                 counter++;
 
                 Debug.Log("Hit");

@@ -3,29 +3,48 @@ using UnityEngine;
 public class MainMenuUI : MonoBehaviour
 {
     public GameObject mainPanel;
-    public GameObject levelsPanel;
+    public GameObject creditsPanel;
     public GameObject howToPlayPanel;
     public GameObject storyPanel;
+    public GameObject[] htpInfo;
+    private int infoPage = 0;
+    public AudioClip buttonPress;
+
 
     // Makes sure only mainPanel is on on start
     void Start()
     {
         if (mainPanel != null) mainPanel.SetActive(true);
-        if (levelsPanel != null) levelsPanel.SetActive(false);
-        if (howToPlayPanel != null) howToPlayPanel.SetActive(false);
+        if (creditsPanel != null) creditsPanel.SetActive(false);
+        if (howToPlayPanel != null)
+        {
+
+            howToPlayPanel.SetActive(false);
+
+            for (int i = 0; i < htpInfo.Length; i++)
+            {
+
+                htpInfo[i].SetActive(false);
+
+            }
+
+        }
         if (storyPanel != null) storyPanel.SetActive(false);
 
     }
 
-    // Opens levelsPanel
-    public void OpenLevels()
+    // Opens creditsPanel
+    public void Credits()
     {
+        
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
         if (mainPanel != null)
         {
 
             mainPanel.SetActive(false);
 
-            levelsPanel.SetActive(true);
+            creditsPanel.SetActive(true);
 
         }
        
@@ -34,6 +53,9 @@ public class MainMenuUI : MonoBehaviour
     // Opens storyPanel
     public void Story()
     {
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
         if (mainPanel != null)
         {
 
@@ -48,6 +70,9 @@ public class MainMenuUI : MonoBehaviour
     // Opens howToPlayPanel
     public void HowToPlay()
     {
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
         if (mainPanel != null)
         {
 
@@ -55,17 +80,73 @@ public class MainMenuUI : MonoBehaviour
 
             howToPlayPanel.SetActive(true);
 
+            htpInfo[infoPage].SetActive(true);
+
         }
        
+    }
+
+    //scrolls through how to play pages
+    public void HTPNext()
+    {
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
+        if (howToPlayPanel != null)
+        {
+
+            htpInfo[infoPage].SetActive(false);
+
+            infoPage++;
+
+            if (infoPage >= htpInfo.Length)
+            {
+
+                infoPage = 0;
+
+            }
+
+            htpInfo[infoPage].SetActive(true);
+
+        }
+
+    }
+
+    public void HTPPrev()
+    {
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
+        if (howToPlayPanel != null)
+        {
+
+            htpInfo[infoPage].SetActive(false);
+
+            infoPage--;
+
+            if (infoPage <= htpInfo.Length)
+            {
+
+                infoPage = 4;
+
+            }
+
+            htpInfo[infoPage].SetActive(true);
+
+        }     
+
     }
 
     // Will retrun to only mainPanel on and turns off the appropriate panel
     public void Back()
     {
-        if (levelsPanel != null)
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
+        if (creditsPanel != null)
         {
 
-            levelsPanel.SetActive(false);
+            creditsPanel.SetActive(false);
 
             mainPanel.SetActive(true);
 
@@ -75,6 +156,8 @@ public class MainMenuUI : MonoBehaviour
         {
 
             howToPlayPanel.SetActive(false);
+
+            htpInfo[infoPage].SetActive(false);
 
             mainPanel.SetActive(true);
 
@@ -91,15 +174,14 @@ public class MainMenuUI : MonoBehaviour
 
     }
 
-    // Loads specific level
-    public void LoadLevel(string sceneName)
-    {
-        GameManager.Instance.LoadScene(sceneName);
-    }
-
     // Quits game
     public void Quit()
     {
+
+        SoundFXManager.instance.PlaySoundFXClip(buttonPress, transform, 1f);
+
+
         Application.Quit();
+
     }
 }

@@ -8,6 +8,10 @@ public class PlayerAnimation : MonoBehaviour
 
     private Animator animator;
 
+    public AudioClip[] jumpSounds;
+    public AudioClip walkSound;
+    public AudioClip runSound;
+
     
     void Start()
     {
@@ -26,22 +30,28 @@ public class PlayerAnimation : MonoBehaviour
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
 
+                SoundFXManager.instance.PlayRandomSoundFXClip(jumpSounds, transform, 1f);
+
+
                 animator.SetTrigger("Jump");
 
             }
 
-            if (Keyboard.current.leftShiftKey.wasPressedThisFrame && (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame))
+            if (Keyboard.current.leftShiftKey.isPressed && (Keyboard.current.aKey.isPressed || Keyboard.current.dKey.isPressed))
             {
+
+                //SoundFXManager.instance.PlaySoundFXClip(runSound, transform, 1f);
+
 
                 animator.SetBool("Run", true);
 
-
             }
-            else if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
+            else if (Keyboard.current.aKey.isPressed || Keyboard.current.dKey.isPressed)
             {
 
-                animator.SetBool("Walk", true);
+               // SoundFXManager.instance.PlaySoundFXClip(walkSound, transform, 1f);
 
+                animator.SetBool("Walk", true);
 
             }
             else

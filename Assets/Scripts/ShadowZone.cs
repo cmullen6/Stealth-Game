@@ -8,6 +8,15 @@ public class ShadowZone : MonoBehaviour
     static int playerInShadows = 0; // supports overlapping zones
     float targetAlpha = 0f;
 
+    private Animator animator;
+
+    void Start()
+    {
+
+        animator = GetComponent<Animator>();
+
+    }
+
     void Update()
     {
         if (overlay == null) return;
@@ -25,6 +34,9 @@ public class ShadowZone : MonoBehaviour
 
         playerInShadows++;
         targetAlpha = 0.5f;
+
+        animator.SetBool("Hiding", true);
+
     }
 
     void OnTriggerExit(Collider other)
@@ -36,6 +48,9 @@ public class ShadowZone : MonoBehaviour
         {
             playerInShadows = 0;
             targetAlpha = 0f;
+
+            animator.SetBool("Hiding", false);
+
         }
     }
 

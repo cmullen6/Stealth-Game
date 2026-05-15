@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public AudioClip pickupClip;
+
     [Header("Timer")]
     [SerializeField] private float maxTime = 120f;
     private float timer;
@@ -78,7 +80,12 @@ public class GameManager : MonoBehaviour
 
     public void AddPickup(int amount)
     {
+
+        SoundFXManager.instance.PlaySoundFXClip(pickupClip, transform, 1f);
+
+
         currentPickups += amount;
+
     }
 
     public void TriggerGameOver()
